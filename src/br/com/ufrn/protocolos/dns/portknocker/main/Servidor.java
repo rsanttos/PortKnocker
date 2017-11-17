@@ -38,7 +38,9 @@ public class Servidor {
 		ServerSocket serverSocket = new ServerSocket(porta);
 		System.out.println("--------------------------------------------------------------------");
 		System.out.println("Aguardando conexão do cliente no servidor. Porta: " + porta);
-		//serverSocket.setSoTimeout(9000);
+		if(posicao != 0) {
+			serverSocket.setSoTimeout(9000);			
+		}
 		Socket socket = serverSocket.accept();
 		String enderecoCliente = socket.getInetAddress().getHostAddress();
 		System.out.println("Cliente " + enderecoCliente + " conectado.");

@@ -12,7 +12,7 @@ public class Cliente {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		int[] portas = { 6666, 7777, 8888, 9999 };
+		int[] portas = { 6666, 7777, 888, 9999 };
 		String host = "localhost";
 		
 		for (int i = 0; i < portas.length; i++) {
